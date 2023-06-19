@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Gutierrez Velez Luis Eduardo">
+    <title>Estampados y Sublimados de Ropa </title>
+    <link rel="stylesheet" href="CSS/EstiloExterno.css">
+    <!-- comentario en html   -->
+    <style>
+
+    body {
+      background-color: #fff;
+      text-align: center;
+    }
+    
+    h1 {
+      text-align: center;
+    }
+
+    nav {
+      text-align: center;
+    }
+
+    h2 {
+        font-size: 32px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        background-color:#caf3f5;
+        color: royalblue; 
+    }
+    
+    .container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .columna {
+        flex: 1;
+        margin: 0 10px;
+    }
+
+    h3 {
+        font-size: 26px;
+        background-color: #97fad4;
+        color:rgb(17, 83, 206)
+    }
+
+    .slideshow-container {
+    margin: 0 auto;
+    width: 80%; /* Ajusta el ancho del contenedor según sea necesario */
+    max-width: 800px; /* Limita el ancho máximo del contenedor */
+    height: auto; /* Permite que la altura se ajuste automáticamente */
+    }
+
+    .slide {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        display: none;
+    }
+
+    .slide:first-child {
+        display: block;
+    }
+
+    .slide img {
+        display: block;
+        margin: 0 auto; /* Centra la imagen horizontalmente dentro del contenedor */
+        max-width: 100%;
+        height: auto;
+    }
+
+    .productos{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+    
+    .producto {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+    }
+
+    .producto h4, .producto p {
+        margin: 5px 0;
+        text-align: center;
+    }
+    .portada img {
+        display: block;
+        margin: auto;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        max-width: 100%;
+        height: auto;    
+    }
+    
+    img {
+          border-radius: 5px; /* Agrega bordes redondeados a las imágenes */
+          box-sizing: border-box; /* Incluye el tamaño del borde en el cálculo del tamaño total */
+        }
+
+    .producto img {
+      display: block;  
+      margin-right: 20px;
+      width: 150px;
+      height: 150px;
+      align-self: center;
+      border: 1px solid rgb(0, 0, 0); /* Establece un borde de 1px  */
+      box-sizing: border-box;
+    }
+    
+    .producto-info {
+      flex: 1;
+    }
+    
+    .product-title {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    
+    .product-description {
+      margin-bottom: 10px;
+    }
+    
+    .product-price {
+      font-weight: bold;
+    }
+
+    .boton {
+        display: inline-block; /* Muestra el elemento como un bloque en línea */
+        padding: 10px 20px; /* Establece un relleno de 10px en la parte superior e inferior y 20px en los lados */
+        background-color: #007bff; /* Establece el color de fondo c */
+        color: #fff; /* Establece el color del texto  */
+        text-decoration: none; /* Elimina la decoración de subrayado del texto */
+        border-radius: 4px; /* Agrega bordes redondeados al botón */
+        font-weight: bold; /* Establece el texto en negrita */
+    }
+
+    .boton:hover {
+        background-color: #000000; /* Establece el color de fondo como negro cuando se pasa el cursor sobre el botón */
+    }
+   
+    @media (max-width: 768px) {
+        .productos {
+            grid-template-columns: 1fr;
+        }
+    }   
+
+    h5 {
+        font-size: 26px;
+        color:rgb(17, 83, 206)
+    }
+
+    .formulario{
+        align-self: center;
+        text-align: center;
+        background-color: #AFEEEE;
+    }
+
+    .contacto {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        margin-top: 20px;  
+    }
+        
+    </style>
+</head>
+
+<body>
+    <header>
+        <!-- Contenido del encabezado -->
+        <div class="logo">
+            <img src="Imagenes/logotipo.png" alt="Logo de Estampados y Sublimados">
+            <h1 class="sitio">Sublimado y Estampados S.A.</h1>
+        </div>
+        <nav>
+            <!-- Menú de navegación -->
+            <ul class="barra de navegacion">    
+                <li><a href="Home.html">Inicio</a></li>
+                <li><a href="Accesorios.html">Categoría de Accesorios</a></li>
+                <li><a href="Vestimenta.html">Categoría de Ropa</a></li>
+                <li><a href="Nosotros.html">Nosotros</a></li>
+            </ul>  
+        </nav>
+    </header>
+    <main>
+        <!-- Contenido de la página de Estamapados y Sublimados de Vestimentas -->
+        <h2 >Catalago de Vestimentas </h2>
+        <div class="slideshow-container">
+            <div class="slide">
+                <img src="Imagenes/sublimados-intro.jpg" alt="Productos">
+            </div>
+            <div class="slide">
+                <img src="Imagenes/Ejemplo1.jpg" alt="Productos">
+            </div>
+            <div class="slide">
+                <img src="Imagenes/Ejemplo2.jpg" alt="Productos">
+            </div>
+            <div class="slide">
+                <img src="Imagenes/Ejemplo3.jpg" alt="Productos">
+            </div>
+        </div>
+        <div class="container">
+            <section class="Sublimados">
+                <div class="columna">  
+                    <h3>Sublimados</h3>
+                    <aside class="productos">
+                        <div class="producto">
+                            <img src="Imagenes/camisetas-sublimadas.jpg" alt="Sublimado 1">
+                            <div class="producto-info">
+                                <h4 class="product-title">Camiseta con diseño</h4>
+                                <p class="product-description">Camiseta con diseño de Micky Mouse.</p>
+                                <p class="product-price">$9.99</p>
+                                <button class="boton" name="carrito">Agregar al carrito</button>
+                            </div>
+                        </div>
+            
+                        <div class="producto">
+                            <img src="Imagenes/camisetas-sublimadas-1.jpg" alt="Sublimado 2">
+                            <div class="producto-info">
+                            <h4 class="product-title">Camiseta con diseño</h4>
+                            <p class="product-description">Camiseta con diseño personalizado.</p>
+                            <p class="product-price">$9.99</p>
+                            <button class="boton" name="carrito">Agregar al carrito</button>
+                            </div>
+                        </div>
+
+                        <div class="producto">
+                            <img src="Imagenes/short-sublimado.jpg" alt="Sublimado 3">
+                            <div class="producto-info">
+                            <h4 class="product-title">Short con diseño</h4>
+                            <p class="product-description">Short con diseño de Dragon Ball Z.</p>
+                            <p class="product-price">$7.99</p>
+                            <button class="boton" name="carrito">Agregar al carrito</button>
+                            </div>
+                        </div>
+
+                        <div class="producto">
+                            <img src="Imagenes/short-sublimado1.jpg" alt="Sublimado 4">
+                            <div class="producto-info">
+                            <h4 class="product-title">Short con diseño</h4>
+                            <p class="product-description">Short con diseño de equipo de futbol.</p>
+                            <p class="product-price">$9.99</p>
+                            <button class="boton" name="carrito">Agregar al carrito</button>
+                            </div>
+                        </div>
+
+                        <div class="producto">
+                            <img src="Imagenes/gorra-sublimado.jpg" alt="Sublimado 5">
+                            <div class="producto-info">
+                            <h4 class="product-title">Gorra con diseño</h4>
+                            <p class="product-description">Gorra con diseños + frases.</p>
+                            <p class="product-price">$4.99</p>
+                            <button class="boton" name="carrito">Agregar al carrito</button>
+                            </div>
+                        </div>
+
+                        <div class="producto">
+                            <img src="Imagenes/gorra-sublimado1.jpg" alt="Sublimado 6">
+                            <div class="producto-info">
+                            <h4 class="product-title">Gorra con diseño</h4>
+                            <p class="product-description">Gorra con diseños + frases.</p>
+                            <p class="product-price">$4.99</p>
+                            <button class="boton" name="carrito">Agregar al carrito</button>
+                            </div>
+                        </div>
+                        <!-- Agrega más productos aquí -->
+                    </aside>    
+                </div>             
+                
+            </section>
+                
+            <section class="Estamapdos">
+                <div class="columna">
+                    <h3>Estampados</h3>
+                    <aside class="productos">
+                        <div class="producto">
+                        <img src="Imagenes/camisetas-estampados.jpg" alt="Estamapdos 1">
+                        <div class="producto-info">
+                            <h4 class="product-title">Camiseta con diseño</h4>
+                            <p class="product-description">Camiseta con diseño de Dragon Ball Z.</p>
+                            <p class="product-price">$9.99</p>
+                            <button class="boton" name="carrito">Agregar al carrito</button>
+                        </div>
+                        </div>
+                
+                        <div class="producto">
+                        <img src="Imagenes/camisetas-estampados-1.jpg" alt="Estamapdos 2">
+                        <div class="producto-info">
+                            <h4 class="product-title">Camiseta con diseño</h4>
+                            <p class="product-description">Camiseta con diseño de ADIDAS.</p>
+                            <p class="product-price">$9.99</p>
+                            <button class="boton" name="carrito">Agregar al carrito</button>
+                        </div>
+                        </div>
+        
+                        <div class="producto">
+                        <img src="Imagenes/short-estampados.jpg" alt="Estamapdos 3">
+                        <div class="producto-info">
+                            <h4 class="product-title">Short con diseño</h4>
+                            <p class="product-description">Short con diseño de flores.</p>
+                            <p class="product-price">$7.99</p>
+                            <button class="boton" name="carrito">Agregar al carrito</button>
+                        </div>
+                        </div>
+        
+                        <div class="producto">
+                        <img src="Imagenes/short-estampados1.jpg" alt="Estamapdos 4">
+                        <div class="producto-info">
+                            <h4 class="product-title">Short con diseño</h4>
+                            <p class="product-description">Short con diseño animado.</p>
+                            <p class="product-price">$6.99</p>
+                            <button class="boton" name="carrito">Agregar al carrito</button>
+                        </div>
+                        </div>
+        
+                        <div class="producto">
+                        <img src="Imagenes/jeans-estamapados.jpg" alt="Estamapdos 5">
+                        <div class="producto-info">
+                            <h4 class="product-title">Jeans con diseño</h4>
+                            <p class="product-description">Jeans con diseños de caricaturas.</p>
+                            <p class="product-price">$9.99</p>
+                            <button class="boton" name="carrito">Agregar al carrito</button>
+                        </div>
+                        </div>
+
+                        <div class="producto">
+                            <img src="Imagenes/jeans-estampados1.jpg" alt="Estamapdos 6">
+                            <div class="producto-info">
+                                <h4 class="product-title">Jeans con diseño</h4>
+                                <p class="product-description">Jeans con diseños personalizados.</p>
+                                <p class="product-price">$9.99</p>
+                                <button class="boton" name="carrito">Agregar al carrito</button>
+                            </div>
+                            </div>
+                    </aside>
+                <!-- Agrega más productos aquí -->
+                </div>
+            </section>
+        </div>
+        <section class="formulario">
+            <h5>Formulario</h5>
+            <ul class="contacto">
+                <li> <p>Le invitamos a llenar el siguiente formulario calificando nuestros productos y dandonos su opinion del mismo:</p></li>
+                <li><a href="FormVestimenta.html">Formulario de Vestimentas</a></li> 
+            </ul>
+        </section>
+    </main> 
+
+    <script type="text/javascript">
+         const botonesAgregarCarrito = document.querySelectorAll('button[name="carrito"]');
+
+         botonesAgregarCarrito.forEach((boton) => {
+        boton.addEventListener('click', () => {
+        alert('Su producto se ha agregado correctamente');
+        });
+    });
+
+    // Obtener todas las imágenes de los productos
+    const slides = document.querySelectorAll('.slide');
+        let currentSlide = 0;
+
+        // Función para mostrar la siguiente imagen de manera circular
+        function showNextSlide() {
+            slides[currentSlide].style.display = 'none';
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].style.display = 'block';
+        }
+
+        // Iniciar el bucle de cambio de imágenes cada 3 segundos
+        setInterval(showNextSlide, 3000);
+    </script>
+
+    <footer>
+        <address>
+           <p id="Luis"> Hecho por: <a href="luisedgut2001@gmail.com">Gutierrez Velez Luis</a></p>
+            <span><em>Redes sociales</em></span>
+            <br>
+                <a href="#"><i class="fab fa-facebook-f">Facebook</i></a>
+                <a href="#"><i class="fab fa-twitter">Twitter</i></a>
+                <a href="#"><i class="fab fa-instagram">Instagram</i></a>
+                <a href="https://www.youtube.com"><i class="fab fa-youtube">Youtube</i></a> 
+        </address>
+        Derechos de Autor &copy; 2023 - Sublimado y Estampados S.A.
+    </footer>
+</body>
+
+</html>
+

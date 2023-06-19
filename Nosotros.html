@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Calderon Serrano Kleidy Anallely">
+    <title>Estampados y Sublimado - Nosotros</title>
+      <link rel="stylesheet" href="CSS/EstiloExterno.css">
+    <style>
+        /* Hoja de estilo interna */
+        body {
+             background-color: #fff;
+             text-align: center;
+        }
+        
+        /* Hoja de estilo en línea */
+        h1.sitio {
+             color: #fff;
+             font-size: 30px;
+             margin: 0;
+        }
+        
+        /* Selectores simples */
+        h2, h3 {
+             color: #4682B4;
+             font-size: 23px;
+             background-color: #F0F3FF;
+             font-style: italic;
+        }
+        
+        p {
+             font-size: 17px;
+        }
+        
+        /* Selectores de clase */
+        .contacto {
+             list-style-type: none;
+             margin: 0;
+             padding: 0;
+             margin-top: 20px;
+        }
+        
+        .fondo {
+             background-color: #AFEEEE;
+        }
+        
+        /* Selectores de atributos */
+        img[alt="Logo de Estampados y Sublimado"] {
+             width: 100px;
+             height: 100px;
+             margin-right: 20px;
+        }
+        
+        /* Selectores combinadores */
+        .flex-container .flex-item {
+             flex: 0 0 150px;
+             margin: 20px;
+        }
+        
+        /* Selectores de pseudo clases */
+        .flex-container .flex-item:nth-child(2n) {
+             background-color: #F0F8FF;
+        }
+        
+        /* Selectores de pseudo elementos */
+        .flex-container .flex-item::after {
+             display: block;
+             text-align: center;
+             font-style: italic;
+             color: #4682B4;
+        }
+        
+        /* Estrategia de maquetación - Flexbox */
+        .flex-container {
+             display: flex;
+             flex-wrap: wrap;
+             justify-content: center;
+             overflow-x: auto;
+             margin-bottom: 20px;
+        }
+        
+        /* Estrategia de maquetación - Grid */
+        .grid-container {
+             display: grid;
+             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+             grid-gap: 20px;
+        }
+        
+        .grid-item {
+             background-color: #AFEEEE;
+             padding: 20px;
+             border-radius: 5px;
+             box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Estilos para la sección de Nosotros */
+        section {
+             text-align: justify;
+             text-align-last: center;
+             margin: 20px auto;
+             max-width: 800px;
+        }
+        
+        section p {
+             margin-bottom: 10px;
+        }
+
+        .nombres {
+             text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <!-- Contenido del encabezado -->
+        <div class="logo"> 
+             <img src="Imagenes/logotipo.png" alt="Logo de Estampados y Sublimado">
+                 <h1 class="sitio">Sublimado y Estampados S.A.</h1>
+        </div>
+        <nav>
+            <!-- Menú de navegación -->
+            <ul>
+                 <li><a href="Home.html">Inicio</a></li>
+                 <li><a href="Accesorios.html">Categoría de Accesorios</a></li>
+                 <li><a href="Vestimenta.html">Categoría de Ropa</a></li>
+                 <li><a href="Nosotros.html">Nosotros</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <!-- Contenido de la página de Nosotros -->
+        <div>
+             <h2>Sobre Nosotros</h2>
+                 <p>En Sublimado y Estampado S.A., nos especializamos en la creación de productos personalizados utilizando las técnicas de sublimación y estampados. 
+                    Sabemos que una venta exitosa comienza por captar la atención de tus clientes, y por eso te ofrecemos una amplia gama de opciones atractivas y de alta calidad</p>
+                     <img src="Imagenes/subli.jpg" alt="Empresa" width="350" height="350">
+                     <img src="Imagenes/subli1.png" alt="Empresa1" width="350" height="350">
+                 <p>Con la sublimación, podemos llevar tus diseños y gráficos a otro nivel en productos como camisetas, creando impresiones vibrantes y duraderas. Nuestro proceso de sublimación 
+                   asegura colores vivos y detalles nítidos que no se desvanecen con el tiempo. Ya sea que necesites camisetas promocionales, uniformes para tu equipo deportivo o prendas personalizadas 
+                   para eventos, estamos aquí para ayudarte.</p>
+        </div>
+    </section>
+    <section>
+             <h3>Nuestro Equipo</h3>
+                 <p>Nos enorgullece ser tu socio estratégico para realzar la imagen de tu marca a través de sublimación y estampados.</p>
+        
+        <div class="flex-container">
+            <div class="flex-item">
+                 <img src="Imagenes/kleidy.png" alt="Miembro del equipo 1" width="150" height="150">
+                 <p class="nombres"><i>Kleidy Anallely Calderon Serrano</i></p>
+            </div>
+            <div class="flex-item">
+                 <img src="Imagenes/gutierrez.png" alt="Miembro del equipo 2" width="150" height="150">
+                 <p class="nombres"><i>Luis Eduardo Gutierrez Velez</i></p>
+            </div>
+            <div class="flex-item">
+                 <img src="Imagenes/Meza.png" alt="Miembro del equipo 2" width="150" height="150">
+                 <p class="nombres"><i>Maikel Danilo Meza Cedeño</i></p>
+            </div>
+            <div class="flex-item">
+                 <img src="Imagenes/darwin.png" alt="Miembro del equipo 2" width="150" height="150">
+                 <p class="nombres"><i>Darwin Alfredo Zambrano Muruzumbay</i></p>
+            </div>
+        </div>
+    </section>
+    <section>
+             <h3>Redes Sociales</h3>
+                 <p>Síguenos en nuestras redes sociales para estar pendiente de nuestros productos y servicios.</p>
+        <div class="grid-container">
+            <div class="grid-item">
+                <a href="https://www.facebook.com">
+                    <img src="Imagenes/Facebook.png" alt="Facebook" width="50" height="50">
+                </a>
+            </div>
+            <div class="grid-item">
+                <a href="https://www.instagram.com">
+                    <img src="Imagenes/Instagram.png" alt="Instagram" width="50" height="50">
+                </a>
+            </div>
+            <div class="grid-item">
+                <a href="https://www.twitter.com">
+                    <img src="Imagenes/Twitter.png" alt="Twitter" width="50" height="50">
+                </a>
+            </div>
+        </div>
+    </section>
+    <section>
+        <h3>Contacto</h3>
+        <ul class="contacto">
+             <li>Correo electrónico: sitiogrupo1@sublimadoestampados.com</li>
+             <li>Teléfono convencional: 042044321</li>
+             <li>Teléfono celular: +593 986311234</li>
+        </ul>
+    </section>
+    <section>
+        <h3>Formulario</h3>
+             <p>Para obtener asesoría sobre el costo de algún producto que desea, llene el siguiente formulario y nos comunicaremos contigo.</p>
+                  <p><a href="FormNosotros.html">--Da clic aquí para acceder al formulario--</a></p>
+             <p class="fondo">¡Contáctanos hoy mismo y descubre cómo podemos ayudarte a llevar tus ideas al siguiente nivel!</p><br>
+    </section>
+
+    <footer>
+        <!-- Contenido del pie de página -->
+          <p id="Kleidy"> Hecho por: <a href="#2">Calderón Serrano Kleidy</a></p>
+          <p>Derechos de Autor &copy; 2023 - Sublimado y Estampados S.A.</p>     
+    </footer>
+    
+    <script>
+     //Arreglo llamado equipo que contiene objetos, que representa a un miembro del equipo y tiene una propiedad descripcion.
+        var equipo = [
+            { 
+                 descripcion: 'Encargada de realizar la página "Nosotros" del Sitio de Sublimado y Estampado S.A.'
+            },
+            {
+                 descripcion: 'Encargado de realizar la página "Categoría de Ropa" del Sitio de Sublimado y Estampado S.A.'
+            },
+            {
+                  descripcion: 'Encargado de realizar la página "Categoría de Accesorios" del Sitio de Sublimado y Estampado S.A.'
+            },
+            {    
+                 descripcion: 'Encargado de realizar la página "Inicio" del Sitio de Sublimado y Estampado S.A.'
+            }
+        ];
+
+            //Se obtienen todas las imágenes que se muestran en la presentacion del equipo
+                var grupo = document.querySelectorAll('.flex-item img');
+            // Agrega eventos al pasar el mouse sobre las imágenes del equipo
+                grupo.forEach(function(imagen, index) {
+    
+                     imagen.addEventListener('mouseover', function() {
+                         this.style.border = '1px solid blue'; //borde de grosor 1 píxel, de color azul sólido
+                         this.style.transform = 'scale(1.1)'; //hace que la imagen se vea un poco más grande
+                    });
+                     imagen.addEventListener('mouseout', function() {
+                         this.style.border = 'none'; //devuelve la imagen a su estado original(sin borde)
+                         this.style.transform = 'scale(1)'; //regresa la imagen a su tamaño original
+                    });
+               //Agrega un evento de click a cada imagen del equipo 
+               
+                     imagen.addEventListener('click', function() {
+                         var descripcion = equipo[index].descripcion; //obtiene la descripción correspondiente 
+                         alert('\nDescripción: ' + descripcion); //muestra una alerta con la descripción
+                    });
+                });
+
+               //Se obtienen todos los elementos
+                var Items = document.querySelectorAll('.grid-item');
+                //// Agrega eventos al pasar el mouse 
+                Items.forEach(function(item) {
+
+                     item.addEventListener('mouseover', function() {
+                         this.style.backgroundColor = '#bfbfbf'; //cambia el color de fondo
+                    });
+
+                     item.addEventListener('mouseout', function() {
+                         this.style.backgroundColor = '#AFEEEE'; //vuelve al color original
+                    });
+                });
+    </script>
+</body>
+</html> 

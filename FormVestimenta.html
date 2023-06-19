@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Gutierrez Velez Luis Eduardo">
+  <title>Estampados y Sublimado - Formulario</title>
+  <link rel="stylesheet" href="CSS/EstiloExterno.css">
+  <style>
+
+  h2 {
+    text-align: center;
+  }
+
+  .formulario {
+      width: 40%;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #f2f2f2;
+      border-radius: 5px;
+    }
+
+  .formulario label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .formulario input[type="text"]{
+      width: 50%;
+      padding: 5px;
+      margin-bottom: 10px;
+      border-radius: 3px;
+      border: 1px solid #ccc;
+    }
+
+    .formulario select{
+      width: 20%;
+      padding: 5px;
+      margin-bottom: 10px;
+      border-radius: 3px;
+      border: 1px solid #ccc;
+    }
+
+    .formulario input[type="radio"]{
+      width: 10%;
+      padding: 5px;
+      margin-bottom: 10px;
+      border-radius: 3px;
+      border: 1px solid #ccc;
+      display: inline-flex;
+    }
+
+    .formulario textarea {
+      width: 100%;
+      padding: 5px;
+      margin-bottom: 10px;
+      border-radius: 3px;
+      border: 1px solid #ccc;
+    }
+
+    .text-center{
+    text-align: center;
+    } 
+
+    .mensajeError {
+    color:rgb(255, 0, 0);
+    font-size: 15px;
+    margin-top: 5px;
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="Imagenes/logotipo.png" alt="Logo de Estampados y Sublimado">
+      <h1 class="sitio">Sublimado y Estampados S.A.</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="Home.html">Inicio</a></li>
+        <li><a href="Accesorios.html">Categoría de Accesorios</a></li>
+        <li><a href="Vestimenta.html">Categoría de Ropa</a></li>
+        <li><a href="Nosotros.html">Nosotros</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section>
+    <h2>Formulario de Vestimenta</h2>
+    <p>Este formulario es para conocer su opinión sobre los productos de vestimentas que ofrecemos. Queremos saber si está satisfecho con nuestros productos, sus sugerencias de mejora y cualquier otra retroalimentación que desee compartir con nosotros.</p>
+    <div class="formulario">
+      <form id="formVes" name="formVes">
+        <div>
+            <label for="nombre">Nombre y Apellido:</label>
+            <input type="text" id="nombre" name="nombre" class="formItem" placeholder="ingrese nombre" />
+          </div>
+
+        <div>
+            <label for="tel">Telefono:</label>
+            <input type="text" id="telefono" name="telefono" class="formItem" />
+        </div>
+
+        <div>
+          <label>Fecha de Nacimiento:</label>
+          <input type="date" name="fecha" id="fecha" class="formItem" />
+        </div>
+
+       <div>
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" class="formItem" />
+        </div>
+
+        <div>
+          <label for="opciones">Tipo de servicio:</label>
+          <select id="opciones" name="opciones" class="formItem" >
+          <option value="0">Seleccionar</option>
+          <option value="sublimados">Sublimados</option>
+          <option value="estampados">Estampados</option>
+          </select>
+      </div>
+
+      <div>
+          <label for="vestimenta">Tipo de vestimenta:</label>
+          <select id="vestimenta" name="vestimenta" class="formItem" >
+            <option value="0">Seleccionar</option>
+            <option value="camiseta">Camisetas</option>
+            <option value="pantalon">Blusas</option>
+            <option value="chaqueta">Jeans</option>
+            <option value="chaqueta">Shorts</option>
+            <option value="chaqueta">Gorras</option>
+            <option value="otros">Otros</option>
+          </select>
+        </div>
+       
+        <div>
+            <label>Calificación del producto:</label>
+            <div class="rating">
+              <label>
+                <input type="radio" id="excepcional" name="calificacion" value="excepcional" >
+                Excepcional
+              </label>
+      
+              <label>
+                <input type="radio" id="bueno" name="calificacion" value="bueno">
+                Bueno
+              </label>
+      
+              <label>
+                <input type="radio" id="regular" name="calificacion" value="regular">
+                Regular
+              </label>
+      
+              <label>
+                <input type="radio" id="malo" name="calificacion" value="malo">
+                Malo
+              </label>
+      
+              <label>
+                <input type="radio" id="pesimo" name="calificacion" value="pesimo">
+                Pésimo
+              </label>
+            </div>
+        </div>
+
+        <div>
+            <label>Retroalimentación</label> <br>
+            <textarea class="form-control" id="texto" rows="4" cols="50" class="formItem">
+                
+            </textarea>
+        </div>
+        <div class="text-center">
+            <input type="submit" name="btnEnviar" class="btn btn-primary" value="Enviar">
+            <input type="reset" class="btn btn-primary" value="Cancelar">
+            <input type="button" class="btn btn-primary" value="Button">
+       </div>
+
+    </form>
+    </div>
+  </section>
+  <script type="text/javascript">
+    //var form = document.getElementById("formContacto");
+var form = document.querySelector("#formVes"); // selecciona el primero que cumple con el selector
+//form.addEventListener('submit', validar);
+document.formVes.addEventListener('submit', validar);
+
+function validar(event) {
+   var resultado = true;
+   // obtener los elementos a validar
+  // var txtNombres = document.getElementById("nombres");//document.querySelector("#nombres"); // reotrna el primer input que tenga name ='nombres'
+   var txtNombres = document.formVes.nombre;
+   var txtTelefono = document.getElementById("telefono");
+   var selectOpciones = document.getElementById("opciones");
+   var selectVestimenta = document.getElementById("vestimenta");
+   var otrosVestimentaInput = document.createElement("input");
+    otrosVestimentaInput.type = "text";
+    otrosVestimentaInput.name = "otros_vestimenta";
+    otrosVestimentaInput.placeholder = "Ingrese otra vestimenta";
+    otrosVestimentaInput.style.display = "none";
+
+   var radiosCalificacion = document.getElementsByName("calificacion");
+   // document.querySelectorAll("input[name='genero']");
+  // var radiosGenero= document.formContacto.genero;
+   
+   // si lo encuentra retorna un arreglo de radios
+
+   var txtfecha = document.getElementById("fecha");
+   var txtemail = document.getElementById("email");
+
+   // expresiones regulares (RegEx)
+   var letra = /^[a-z ,.'-]+$/i;// letrasyespacio   ///^[A-Z]+$/i;// solo letras
+   var correo = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+   var numeroreg = /^[0-9]{10}$/g; // para validar datos que deban tener 10 numeros
+   var telefonoreg = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
+   // llamada a funcion
+   limpiarMensajes();
+
+   //validacion para nombres
+   if (txtNombres.value === '') {
+       resultado = false;
+       mensaje("Nombre y Apellido son requerido", txtNombres);
+
+   } else if (!letra.test(txtNombres.value)) { //letra.test(txtNombres.value)
+       resultado = false;
+       mensaje("Nombre y Apellido solo deben contener letras", txtNombres);
+   } else if (txtNombres.value.length > 20) {
+       resultado = false;
+       mensaje("Nombre y Apellido maximo 40 caracteres", txtNombres);
+   }
+   // lo mismo para apellidos
+
+   //validacion telefono
+   if (txtTelefono.value === "") {
+       resultado = false;
+       mensaje("Telefono es requerido", txtTelefono);
+   } else if (!telefonoreg.test(txtTelefono.value)) {
+       resultado = false;
+       mensaje("Telefono debe ser de 10 digitos", txtTelefono);
+   }
+
+   //validacion email
+   if (txtemail.value === "") {
+       resultado = false;
+       mensaje("Email es requerido", txtemail);
+   } else if (!correo.test(txtemail.value)) {
+       resultado = false;
+       mensaje("Email no es correcto", txtemail);
+   }
+
+   //validacion select
+   if (selectOpciones.value === null || selectOpciones.value === '0') {
+       resultado = false;
+       mensaje("Debe seleccionar el Tipo de Servicio", selectOpciones);
+   }
+
+    //validacion select
+    if (selectVestimenta.value === null || selectVestimenta.value === '0') {
+       resultado = false;
+       mensaje("Debe seleccionar el Tipo de Vestimenta", selectVestimenta);
+   }
+
+    // Agregar evento al cambiar la opción seleccionada en el campo de vestimenta
+    selectVestimenta.addEventListener("change", function() {
+      if (selectVestimenta.value === "otros") {
+        otrosVestimentaInput.style.display = "block";
+      } else {
+        otrosVestimentaInput.style.display = "none";
+      }
+    });
+
+    // Insertar la caja de texto de vestimenta "otros" después del campo de vestimenta
+    selectVestimenta.parentNode.insertBefore(otrosVestimentaInput, selectVestimenta.nextSibling);
+
+   //validacion radio button
+   let sel = false;
+   for (let i = 0; i < radiosCalificacion.length; i++) {
+       if (radiosCalificacion[i].checked) {
+           if (radiosCalificacion[i].value === "F") {
+               alert("Bienvenida amiga");
+           }
+           sel = true;
+           let res = radiosCalificacion[i].value;
+           break;
+       }
+   }
+   if (!sel) {
+       resultado = false;
+       mensaje("Porfavor Califique nuestros productos", radiosCalificacion[0]);
+   }
+
+   // validacion de fecha
+   var dato = txtfecha.value;
+   var fechaN = new Date(dato);// convertir a fecha
+   var anioN = fechaN.getFullYear();
+
+   var fechaActual = new Date();// fecha actual
+   var anioA = fechaActual.getFullYear();
+   if (fechaN > fechaActual) {
+       resultado = false;
+       mensaje("Fecha no puede ser superior a la actual", txtfecha);
+   } else if (anioN < 1930) {
+       resultado = false;
+       mensaje("Anio de nacimiento no puede ser menor a 1930", txtfecha);
+   } else if ((anioA - anioN) < 18) {
+       resultado = false;
+       mensaje("debe ser mayor de 18 años", txtfecha);
+   }
+
+   if (!resultado) {
+       event.preventDefault();  // detener el evento  //stop form from submitting
+   }
+}
+
+function mensaje(cadenaMensaje, elemento) {
+   elemento.focus();
+   var nodoPadre = elemento.parentNode; // div
+   var nodoMensaje = document.createElement("span");
+   nodoMensaje.textContent = cadenaMensaje;
+ //  nodoMensaje.setAttribute("class", "mensajeError");
+   nodoMensaje.className = "mensajeError";
+   nodoPadre.appendChild(nodoMensaje);
+}
+
+function limpiarMensajes() {
+   var mensajes = document.querySelectorAll(".mensajeError");// retorna un arreglo
+   for (let i = 0; i < mensajes.length; i++) {
+       mensajes[i].remove();// remueve o elimina un elemento de mi doc html
+   }
+
+}
+
+formVes.telefono.addEventListener("keypress", soloNumeros);
+function soloNumeros(e){
+   var key =e.keyCode ;
+   if(key < 48 || key > 57){
+       e.preventDefault();
+   }
+   if(e.target.value.length >=10){
+       e.preventDefault();
+   }
+}
+
+</script>
+
+  <footer>
+    <address>
+      <p id="Luis"> Hecho por: <a href="luisedgut2001@gmail.com">Gutierrez Velez Luis</a></p>
+        <span><em>Redes sociales</em></span>
+        <br>
+            <a href="#"><i class="fab fa-facebook-f">Facebook</i></a>
+            <a href="#"><i class="fab fa-twitter">Twitter</i></a>
+            <a href="#"><i class="fab fa-instagram">Instagram</i></a>
+            <a href="https://www.youtube.com"><i class="fab fa-youtube">Youtube</i></a> 
+    </address>
+    Derechos de Autor &copy; 2023 - Sublimado y Estampados S.A.
+  </footer>
+
+</body>
+</html>

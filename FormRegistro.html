@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Darwin Zambrano">
+    <title>Sublimado y Estampados S.A. </title>
+    <link rel="shortcut icon" href="logo-imno.png" type="image/x-icon">
+    <link rel="stylesheet" href="CSS/EstiloExterno.css">
+    <style>
+      body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    }
+    
+    h2 {
+      text-align: center;
+    }
+    .mensajeError{
+color:rgb(255, 0, 0);
+font-size: 9px;
+}
+    form {
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: #f2f2f2;
+      padding: 20px;
+      border-radius: 5px;
+    }
+    
+    label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    #formasPago {
+        margin-top: 20px;
+      }
+
+      #formasPago label {
+        display: block;
+        margin-top:2px;
+
+      }
+    
+    input,
+    select,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    
+    input[type="submit"] {
+  margin-top: 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 4px;
+  
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+    
+    .resultado {
+      max-width: 600px;
+      margin: 20px auto;
+      background-color: #FFF;
+      padding: 20px;
+      border-radius: 5px;
+      text-align: center;
+    }
+    input[type="reset"] {
+  margin-top: 20px;
+  background-color: #2c6fc7;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 4px;
+  
+}
+    input[type="reset"]:hover {
+  background-color: #3fa1e2;
+}
+  
+    
+    .hidden {
+      display: none;
+    }
+
+    @media (max-width: 600px) {
+    .container {
+      grid-template-columns: 1fr;
+    }
+    }
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    }
+  
+    </style>
+</head>
+<body>
+ 
+  <header>
+    <!-- Contenido del encabezado -->
+    <div class="logo">
+        <img src="Imagenes/logotipo.png" alt="Logo de Estampados y Sublimado">
+        <h1 class="sitio">Sublimado y Estampados S.A.</h1>
+    </div>
+   
+    <nav>
+        <!-- Menú de navegación -->
+        <ul>
+            <li><a href="Home.html">Inicio</a></li>
+            <li><a href="Accesorios.html">Categoría de Accesorios</a></li>
+            <li><a href="Vestimenta.html">Categoría de Ropa</a></li>
+            <li><a href="Nosotros.html">Nosotros</a></li>
+        </ul>
+    </nav>
+</header>
+
+  <h2 style="font-family: 'Times New Roman', Times, serif; font-size: 50px; color: #ebff36;">Registro de Usuario</h2>
+<div class="FormularioT">  
+  <form id="formRegistro" name="formRegistro">
+  
+    <div> <label >Nombre:</label>
+    <input type="text" id="nombre" name="nombre" 
+    placeholder="...">
+    
+    
+</div>
+  <div> 
+<label >Email:</label>
+    <input type="email" id="email" name="email" 
+    placeholder="...">
+    
+</div>
+<div> 
+<label >Teléfono:</label>
+    <input type="tel" id="telefono" name="telefono"  
+    placeholder="...">
+    
+    
+</div>
+   
+<div><label >Dirección:</label>
+    <textarea id="direccion" name="direccion" ></textarea>
+</div>
+<div>    <label >Producto:</label>
+    <select id="producto" name="producto" class="formItem" >
+      <option value="0">Seleccionar</option>
+      <option value="1">Camiseta con estampado</option>
+      <option value="2">Vaso con estampado</option>
+      <option value="3">Zapatos con estampado</option>
+    </select>
+    
+</div>    
+<div>    <label >Cantidad:</label>
+    <input type="number" id="cantidad" name="cantidad"  >
+ </div>   
+ <div>   <label >Fecha de registro:</label>
+    <input type="date" id="fechaRegistro" name="fechaRegistro" >
+ </div>   
+ <div>  <label >Forma de Pago:</label>
+    <div id="formasPago">
+      <label>
+        <input type="radio" name="pago" value="tarjeta" > Tarjeta de crédito
+      </label>
+      <label>
+        <input type="radio" name="pago" value="transferencia"> Transferencia bancaria
+      </label>
+      <label>
+        <input type="radio" name="pago" value="efectivo"> Efectivo
+    
+    </div> </div>
+
+    <div>
+      <input type="submit" name="btnEnviar" class=" btn-primary" value="Enviar">
+      <input type="reset" class=" btn-primary" value="Cancelar">
+    </div>
+  </form>
+</div>
+  
+  <footer>
+    <div class="contenedor">
+        <h3 class="titulo-footer">Redes sociales</h3>
+        <p id="Darwin"> Hecho por: <a href="#2">Zambrano Muruzumbay Darwin</a></p>
+        <div class="sociales">
+            <a href="#"><i class="fab fa-facebook-f">Facebook</i></a>
+            <a href="#"><i class="fab fa-twitter">Twitter</i></a>
+            <a href="#"><i class="fab fa-instagram">Instagram</i></a>
+            <a href="https://www.youtube.com"><i class="fab fa-youtube">Youtube</i></a>      
+        </div>
+            <h4 class="copy">Derechos de Autor &copy; 2023 - Sublimado y Estampados S.A. </h4>
+    </div>
+</footer>
+<script type="text/javascript">
+var form = document.getElementById("formRegistro");
+form.addEventListener('submit', validar);
+
+function validar(event) {
+    var resultado = true;
+    var txtNombre = document.getElementById("nombre");
+    var txtEmail = document.getElementById("email");
+    var txtTelefono = document.getElementById("telefono");
+    var txtDireccion = document.getElementById("direccion");
+    var selectProducto = document.getElementById("producto");
+    var txtCantidad = document.getElementById("cantidad");
+    var txtFechaRegistro = document.getElementById("fechaRegistro");
+    var radiosPago = document.getElementsByName("pago");
+
+    var letra = /^[a-z ,.'-]+$/i;
+    var correo = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+    var numeroreg = /^[0-9]{10}$/g; 
+    var telefonoreg = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
+    limpiarMensajes();
+   
+ 
+    if (txtNombre.value === '') {
+        resultado = false;
+        mensaje("Nombre es requerido porfavor", txtNombre);
+
+    } else if (!letra.test(txtNombre.value)) { 
+        resultado = false;
+        mensaje("Nombre solo debe contener letras", txtNombres);
+    } else if (txtNombre.value.length > 20) {
+        resultado = false;
+        mensaje("Nombre maximo 15 caracteres", txtNombres);
+    }
+    if (txtEmail.value === "") {
+        resultado = false;
+        mensaje("Email es requerido", txtEmail);
+    } else if (!correo.test(txtEmail.value)) {
+        resultado = false;
+        mensaje("Email no es correcto", txtEmail);
+    }
+    if (txtTelefono.value === "") {
+        resultado = false;
+        mensaje("Ingrese su telefono para contactarlo", txtTelefono);
+    } else if (!telefonoreg.test(txtTelefono.value)) {
+        resultado = false;
+        mensaje("Telefono debe ser de 10 digitos porfavor", txtTelefono);
+    }
+    if (txtDireccion.value === '') {
+        resultado = false;
+        mensaje("Direccion es obligatoriamente requerido", txtDireccion);
+    } else if (txtDireccion.value.length > 20) {
+        resultado = false;
+        mensaje(" Maximo 15 caracteres", txtDireccion);
+
+  }
+  if (selectProducto.value === null || selectProducto.value === '0') {
+      resultado = false;
+      mensaje("Debe seleccionar almenos uno opcion", selectProducto);
+  }
+  if (txtCantidad.value === "") {
+    resultado = false;
+    mensaje("Debe elegir almenos un valor", txtCantidad);
+  } else if (parseInt(txtCantidad.value) <= 0) {
+    resultado = false;
+    mensaje("La cantidad debe ser mayor que cero", txtCantidad);
+  } else if (parseInt(txtCantidad.value) > 40) {
+    resultado = false;
+    mensaje("La cantidad debe ser menor o igual a 40", txtCantidad);
+  }
+  var txtFechaRegistro = document.getElementById("fechaRegistro");
+
+  var fechaActual = new Date();
+  var fechaSeleccionada = new Date(txtFechaRegistro.value);
+  
+  if (fechaSeleccionada < fechaActual) {
+      resultado = false;
+      mensaje("La fecha no puede ser anterior a la fecha actual", txtFechaRegistro);
+  }
+  
+  if (!resultado) {
+      event.preventDefault();
+  }
+
+  let sel = false;
+  for (let i = 0; i < radiosPago.length; i++) {
+  if (radiosPago[i].checked) {
+    if (radiosPago[i].value === "tarjeta") {
+        alert("Hola como estas ");
+        
+    }else{
+        alert("Escogiste otra opcion ");
+    } sel = true;
+    let res = radiosPago[i].value;
+    break; }}
+  
+  if (!sel) {
+  resultado = false;
+  mensaje("Debe seleccionar una forma de pago", radiosPago[2]);
+  }
+
+
+  function mensaje(cadenaMensaje, elemento) {
+      elemento.focus();
+      var nodoPadre = elemento.parentNode; 
+      var nodoMensaje = document.createElement("span");
+      nodoMensaje.textContent = cadenaMensaje;
+    
+      nodoMensaje.className = "mensajeError";
+      nodoPadre.appendChild(nodoMensaje);
+  }
+
+  function limpiarMensajes() {
+      var mensajes = document.querySelectorAll(".mensajeError");
+      for (let i = 0; i < mensajes.length; i++) {
+          mensajes[i].remove();
+      }
+
+
+  }form.telefono.addEventListener("keypress", soloNumeros);
+  function soloNumeros(e){
+      var key =e.keyCode ;
+      if(key < 48 || key > 57){
+          e.preventDefault();
+      }
+      if(e.target.value.length >=10){
+          e.preventDefault();
+      }
+  }
+  var btnCancelar = document.querySelector('input[type="reset"]');
+  btnCancelar.addEventListener('click', function() {
+    form.reset();
+    limpiarMensajes();
+  });
+}
+</script>
+</body>
+</html>

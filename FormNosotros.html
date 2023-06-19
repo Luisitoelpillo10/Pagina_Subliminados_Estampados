@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+   <html lang="es">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="author" content="Calderon Serrano Kleidy Anallely">
+      <title>Estampados y Sublimado - Formulario</title>
+        <link rel="stylesheet" href="CSS/EstiloExterno.css">
+  <style>
+    h2 {
+       color: #4682B4;
+       font-size: 22px;
+       background-color: #F0F3FF;
+       font-style: italic;
+    }
+    section h2, p {
+        text-align: justify;
+        text-align-last: center;
+        margin: 20px auto;
+        max-width: 800px;
+        margin-bottom: 10px;
+        }
+
+    /* Flexbox */
+    .contenedor {
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       flex-wrap: wrap;
+    }
+
+    .imagenes {
+       width: 200px;
+       height: 200px;
+       background-color: #007ACC33;
+       color: #3399FF;
+       text-align: center;
+       margin: 10px;
+       padding: 20px;
+       border-radius: 5px;
+    }
+
+    .form-nos {
+       width: 510px;
+       margin: 20px auto;
+       padding: 22px;
+       background-color: #f2f2f2;
+       border-radius: 5px;
+    }
+
+    .form-nos label {
+       display: block;
+       margin-bottom: 10px;
+    }
+
+    label.principal {
+         font-weight: bold;
+         font-style: italic;
+         color: #4AA3DF;
+    }
+
+    .form-nos input[type="text"],
+    .form-nos input[type="tel"],
+    .form-nos input[type="file"],
+    .form-nos input[type="email"] {
+       width: 100%;
+       padding: 5px;
+       margin-bottom: 10px;
+       border-radius: 3px;
+       border: 1px solid #ccc;
+    }
+
+    .form-nos select {
+       width: 100%;
+       padding: 5px;
+       margin-bottom: 10px;
+       border-radius: 3px;
+       border: 1px solid #ccc;
+    }
+
+    .form-nos textarea {
+       width: 100%;
+       padding: 5px;
+       margin-bottom: 10px;
+       border-radius: 3px;
+       border: 1px solid #ccc;
+    }
+
+    .form-nos input[type="submit"] {
+       padding: 10px 20px;
+       background-color: #4682B4;
+       color: #fff;
+       border: none;
+       cursor: pointer;
+       margin-top: 10px;
+    }
+
+    .error {
+       color: red;
+       background-color: #ffcccc; 
+       font-size: 14px; 
+       padding: 5px; 
+       margin-bottom: 10px;
+    }
+    
+    .form-nos div {
+       display: flex;
+       gap: 10px;
+    }
+
+    .form-nos div label {
+       display: flex;
+       align-items: center;
+       gap: 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+        <img src="Imagenes/logotipo.png" alt="Logo de Estampados y Sublimado">
+        <h1 class="sitio">Sublimado y Estampados S.A.</h1>
+    </div>
+    <nav>
+      <ul>
+         <li><a href="Home.html">Inicio</a></li>
+         <li><a href="Accesorios.html">Categoría de Accesorios</a></li>
+         <li><a href="Vestimenta.html">Categoría de Ropa</a></li>
+         <li><a href="Nosotros.html">Nosotros</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section>
+      <div>
+        <h2>Contacto</h2>
+         <p>Llena este formulario para contactarnos y aprovechar nuestros increíbles servicios. Selecciona el producto de
+            tu interés y adjunta una imagen para que podamos brindarte el mejor resultado. Asegúrate de completar
+            correctamente cada campo para que podamos atenderte de la mejor manera posible.</p>
+     </div>
+     <div class="form-nos">
+         <h2>Formulario para asesoría</h2>
+           <form id="grupo1Form" onsubmit="return validarForm()">
+             <label class="principal" for="nombre">Nombres:</label>
+                 <input type="text" id="nombre" name="nombre">
+             <label class="principal" for="apellido">Apellidos:</label>
+                 <input type="text" id="apellido" name="apellido">
+             <label class="principal" for="genero">Género:</label>
+                 <div>
+                   <label><input type="radio" name="genero" id="genero" value="Masculino"> Masculino</label>
+                   <label><input type="radio" name="genero" value="Femenino"> Femenino</label>
+                  </div>
+              <label class="principal" for="ciudad">Ciudad:</label>
+                 <select id="ciudad" name="ciudad">
+                   <option value="">Selecciona una ciudad</option>
+                     <option value="Quito">Quito</option>
+                     <option value="Guayaquil">Guayaquil</option>
+                     <option value="Cuenca">Cuenca</option>
+                     <option value="Azogues">Azogues</option>
+                     <option value="Ambato">Ambato</option>
+                     <option value="Santo Domingo">Santo Domingo</option>
+                     <option value="Ibarra">Ibarra</option>
+                     <option value="Loja">Loja</option>
+                     <option value="Riobamba">Riobamba</option>
+                     <option value="Esmeraldas">Esmeraldas</option>
+                 </select>
+              <label class="principal" for="sector">Sector:</label>
+                  <div>
+                    <label><input type="radio" name="sector" id="sector" value="Norte"> Norte</label>
+                    <label><input type="radio" name="sector" value="Sur"> Sur</label>
+                    <label><input type="radio" name="sector" value="Este"> Este</label>
+                    <label><input type="radio" name="sector" value="Oeste"> Oeste</label>
+                  </div>
+              <label class="principal" for="email">Correo electrónico:</label>
+                  <input type="email" id="email" name="email">
+              <label class="principal" for="telefono">Teléfono:</label>
+                  <input type="tel" id="telefono" name="telefono">       
+              <label class="principal">Producto de interés:</label>
+                  <div>
+                    <label><input type="checkbox" name="producto" value="1"> Camiseta</label>
+                    <label><input type="checkbox" name="producto" value="2"> Taza</label>
+                    <label><input type="checkbox" name="producto" value="3"> Gorra</label>
+                    <label><input type="checkbox" name="producto" value="4"> Estuche</label>
+                    <label><input type="checkbox" name="producto" value="5"> Jeans</label>
+                    <label><input type="checkbox" name="producto" value="6"> Short</label>
+                  </div>
+              <label class="principal" for="mensaje">Detalles:</label>
+                 <textarea id="mensaje" name="mensaje" rows="7"></textarea>
+             <label class="principal" for="imagen">Adjuntar archivo de la imagen:</label>
+                 <input type="file" id="imagen" name="imagen">
+             <input type="submit" value="Enviar">
+           </form>
+     </div>
+ </section>
+       <section>
+          <div>
+             <h2>Trabajos realizados</h2>
+          </div>
+             <div class="contenedor">
+               <div class="imagenes">
+                 <img src="Imagenes/form-imagen1.jpg" alt="Imagen 1" width="150">
+                   <h3>Camisetas</h3>
+               </div>
+               <div class="imagenes">
+                 <img src="Imagenes/form-imagen2.jpg" alt="Imagen 2" width="150">
+                   <h3>Tazas</h3>
+               </div>
+               <div class="imagenes">
+                 <img src="Imagenes/form-imagen3.jpg" alt="Imagen 3" width="150">
+                   <h3>Gorras</h3>
+               </div>
+               <div class="imagenes">
+                  <img src="Imagenes/form-imagen4.jpg" alt="Imagen 4" width="150">
+                   <h3>Estuches</h3>
+                </div>
+             </div>
+       </section>
+    
+     <footer>
+       <!-- Contenido del pie de página -->
+         <p id="Kleidy"> Hecho por: <a href="#2">Calderón Serrano Kleidy</a></p>
+         <p>Derechos de Autor &copy; 2023 - Sublimado y Estampados S.A.</p>     
+     </footer>
+
+     
+     <script>
+         //Selecciona todos los elementos y se los almacena en la variable imagenes
+          var imagenes = document.getElementsByClassName("imagenes");
+  
+              for (var i = 0; i < imagenes.length; i++) { //itera sobre cada elemento almacenado en la variable 
+                imagenes[i].addEventListener("mouseover", function() {
+                   this.style.backgroundColor = "lightgray"; //cambia el color de fondo del elemento 
+                });
+    
+                imagenes[i].addEventListener("mouseout", function() {
+                   this.style.backgroundColor = ""; // restablece el color de fondo del elemento
+                });
+             }
+
+         var form = document.querySelector("#grupo1Form"); //selecciona ek formulario y se almacena en la variable form. 
+            form.addEventListener('submit', validarForm); //se agrega un evento submit al formulario
+
+              function validarForm(event) {
+                event.preventDefault();
+                var resultado = true;
+                 // obtener los elementos a validar
+                   var txtNombre = document.getElementById("nombre");
+                   var txtApellido = document.getElementById("apellido");
+                   var txtTelefono = document.getElementById("telefono");
+                   var selectCiudad = document.getElementById("ciudad");
+                   var checkboxProductos = document.getElementsByName("producto");
+                   var radiosGenero = document.getElementsByName("genero");
+                   var radiosSector = document.getElementsByName("sector");
+                   var txtEmail = document.getElementById("email");
+                   var txtDetalles = document.getElementById("mensaje");
+                   var inputImagen = document.getElementById("imagen");
+
+                     //valida los campos de texto que solo deben contener letras 
+                     var letra = /^[a-z ,.'-]+$/i;
+                     //valida el campo de dirección de correo electrónico
+                     var correo = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+                     //valida el campo telefono tenga exactamente 10 dígitos. 
+                     var numeroreg = /^[0-9]{10}$/g;
+
+                limpiarMensajes(); //elimina los mensajes de error 
+
+                 // Validación para nombres
+                   if (txtNombre.value.trim() === '') { //verifica si el campo está vacío
+                     resultado = false;
+                       mensaje("* Es necesario que ponga sus nombres.", txtNombre);
+                   } else if (!letra.test(txtNombre.value)) { //verifica si el campo contiene caracteres que no sean letras
+                     resultado = false;
+                       mensaje("* Este campo solo debe contener letras.", txtNombre);
+                   } else if (txtNombre.value.length > 20) { // verifica si el campo excede los 20 caracteres 
+                       resultado = false;
+                      mensaje("* Solo permite máximo 20 caracteres", txtNombre);
+                   }
+   
+                 // Validación para apellidos
+                    if (txtApellido.value.trim() === '') { 
+                      resultado = false;
+                       mensaje("* Es necesario que ponga sus apellidos.", txtApellido);
+                   } else if (!letra.test(txtApellido.value)) {
+                      resultado = false; 
+                       mensaje("* Este campo solo debe contener letras.", txtApellido);
+                   } else if (txtApellido.value.length > 20) {
+                     resultado = false;
+                       mensaje("* Solo permite máximo 20 caracteres.", txtApellido);
+                   }
+            
+                 // Validación para teléfono
+                    if (txtTelefono.value.trim() === '') { //verifica si el campo está vacío
+                      resultado = false;
+                       mensaje("* Es necesario que adjunte su número de teléfono", txtTelefono);
+                    } else if (!numeroreg.test(txtTelefono.value)) { //verifica si el campo cumple con el patrón definido por la expresión regular numeroreg
+                      resultado = false;
+                       mensaje("* Solo debe de contener 10 dígitos numéricos", txtTelefono);
+                    }
+    
+                 // Validación para correo electrónico
+                    if (txtEmail.value.trim() === '') { //verifica si el campo está vacío
+                      resultado = false;
+                       mensaje("* Es necesario que escriba su dirección de correo electrónico", txtEmail);
+                    } else if (!correo.test(txtEmail.value)) { // verifica si el valor del campo cumple con el patrón definido por la expresión regular correo
+                      resultado = false;
+                       mensaje("* El correo electrónico no es válido", txtEmail);
+                    }
+
+                 // Validación para select Ciudad
+                    if (selectCiudad.value.trim() === '' || selectCiudad.value === null) { //verifica si el campo está vacío
+                       resultado = false;
+                         mensaje("* Debe seleccionar una ciudad", selectCiudad);
+                    }
+
+                  // Validación para radio button genero
+                    if (!validarGenero(radiosGenero)) { 
+                      resultado = false;
+                       mensaje("* Debe seleccionar un género", radiosGenero[0]);
+                  }
+
+                  // Validación para Detalles del producto
+                    if (txtDetalles.value.trim() === '') { //verifica si el campo está vacío
+                     resultado = false; 
+                       mensaje("* Detalles son requeridos", txtDetalles);
+                   }
+
+                  // Validación para radio button sector
+                    if (!validarSector(radiosSector)) {
+                     resultado = false;
+                       mensaje("* Debe seleccionar un sector", radiosSector[0]);
+                    }
+
+                  // Validación para checkbox de productos
+                     if (!validarCheckbox(checkboxProductos)) {
+                       resultado = false;
+                         mensaje("* Debe seleccionar al menos un producto", checkboxProductos[0]);
+                      }
+
+                  //Validacion para adjuntar una imagen
+                      if (inputImagen.files.length === 0) { //verifica si el campo está vacío
+                        resultado = false;
+                         mensaje("* Es necesario adjuntar una imagen", inputImagen);
+                      }
+
+                        if (resultado) {
+                            form.submit();
+                        }
+              }
+
+                    function validarGenero(radios) { //verifica si al menos uno de los radio buttons ha sido seleccionado
+                      for (var i = 0; i < radios.length; i++) {
+                          if (radios[i].checked) {
+                              return true;
+                          }
+                      }
+                       return false;
+                    }
+
+                    function validarSector(radiosSector) { //verifica si al menos uno de los radio buttons ha sido seleccionado
+                      var sectorSeleccionado = false;
+                       for (var i = 0; i < radiosSector.length; i++) {
+                         if (radiosSector[i].checked) {
+                           sectorSeleccionado = true;
+                              break;
+                          }
+                        }
+                             return sectorSeleccionado;
+                    }
+
+                    function validarCheckbox(checkprdts) { //verifica si al menos uno de los checkboxes ha sido seleccionado
+                        for (var i = 0; i < checkprdts.length; i++) {
+                           if (checkprdts[i].checked) {
+                               return true;
+                            }
+                        }
+                           return false;
+                      }                   
+
+                    function mensaje(mensaje, elemento) { //se encarga de mostrar un mensaje de error 
+                      var Mensaje = document.createElement('div');
+                          Mensaje.className = 'error';
+                          Mensaje.appendChild(document.createTextNode(mensaje));
+                         elemento.parentNode.insertBefore(Mensaje, elemento.nextSibling);
+                         elemento.focus();
+                    }
+
+                    function limpiarMensajes() { //elimina todos los mensajes de error
+                      var mensajes = document.getElementsByClassName('error');
+                        while (mensajes.length > 0) {
+                          mensajes[0].parentNode.removeChild(mensajes[0]);
+                      }
+                   }
+
+                   form.telefono.addEventListener("keypress", soloNumeros); // permite solo la entrada de dígitos numéricos
+                      function soloNumeros(e){
+                         var key =e.keyCode ;
+                           if(key < 48 || key > 57){
+                             e.preventDefault();
+                            }
+                           if(e.target.value.length >=10){
+                             e.preventDefault();
+                            }
+                      }        
+  </script>
+</body>
+</html>

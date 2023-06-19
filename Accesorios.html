@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title> Accesorios Subliminados</title>
+        <meta charset="UTF-8">
+        <meta name="author" content="Meza Cedeño Maikel Danilo">
+        <link rel="stylesheet" href="CSS/EstiloExterno.css">
+        <style>
+
+            body {
+                background-color: #fff;
+                text-align: center;
+               /* border: 30px solid cyan;  Establece un borde de 30px de ancho y cambia el color del cuerpo del documento */
+                /*padding: 20px; /* Agrega un espacio interno de 20px entre el contenido y el borde */
+            }
+            
+            .container {
+                display: flex; /* El diseño es flexible */
+                justify-content: space-between; /* Distribuye el espacio disponible entre los elementos hijos */
+            }
+
+            h2 {
+                color: #318beb; /* Establece el color del texto  */
+                font-size: 30px; /* Tamaño de fuente  */
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                background-color:#caf3f5;
+            }
+
+            h3 {
+                font-size: 26px;
+                background-color: #97fad4;
+                color:rgb(17, 83, 206)
+            }
+
+            h2, p, h3, h4 {
+                text-align: center; /* Centra el texto */
+            }
+
+            .dividir2 {
+                display: grid; /* Utiliza el sistema de rejilla para organizar los elementos */
+                grid-template-columns: repeat(2, 1fr); /* Crea dos columnas con el mismo ancho */
+                gap: 20px; /* Establece un espacio de 20px entre las imágenes y las descripciones */
+            }
+
+            .Estructura--subsecction {
+                display: flex; /*El diseño es flexible */
+                flex-direction: column; /* Coloca los elementos hijos en una columna */
+                gap: 10px; /* Establece un espacio de 10px entre las imágenes y las descripciones */
+            }
+
+            .Estructura--subsecction img {
+                display: flex; /* Utiliza el modelo de diseño flexible */
+                width: 280px; /* Establece el ancho de la imagen como 300px */
+                height: 280px; /* Establece la altura de la imagen como 300px */
+                border: 1px solid rgb(0, 0, 0); /* Establece un borde de 1px  */
+                box-sizing: border-box; /*  el ancho y alto establecidos ya incluyen el tamaño del relleno y los bordes. */
+                align-items: center; /* Centra los items */
+            }
+
+            a.boton {
+                margin-left: 80px; /* Establece un margen izquierdo de 80px */
+                margin-right: 90px; /* Establece un margen derecho de 90px */
+            }
+
+            .Estructura--subsecction p {
+                margin: 0; /* Elimina el margen vertical  */
+                /*font-style: italic; /* Establece el estilo de fuente como cursiva */
+                font-size: 20px; /* Tamaño de fuente  */
+            }
+
+            .Estructura--subsecction span {
+                font-weight: bold; /* Establece el texto en negrita */
+                text-align: center; /* Centra el texto dentro del elemento span */
+                font-size: 25px; /* Tamaño de fuente para el elemento span */
+            }
+
+            .container h3 {
+                font-size: 30px; /* Tamaño de fuente para el encabezado h3 dentro del contenedor con la clase "container" */
+            }
+
+            .Estructura--subsecction h4 {
+                font-size: 25px; /* Tamaño de fuente para el encabezado h4 dentro del elemento con la clase "Estructura--subsecction" */
+                border: 1px; /* Establece un borde de 1px */
+                margin: 10px; /* Establece un margen de 10px */
+            }
+
+            .boton {
+                display: inline-block; /* Muestra el elemento como un bloque en línea */
+                padding: 10px 20px; /* Establece un relleno de 10px en la parte superior e inferior y 20px en los lados */
+                background-color: #007bff; /* Establece el color de fondo c */
+                color: #fff; /* Establece el color del texto  */
+                text-decoration: none; /* Elimina la decoración de subrayado del texto */
+                border-radius: 4px; /* Agrega bordes redondeados al botón */
+                font-weight: bold; /* Establece el texto en negrita */
+            }
+
+            .boton:hover {
+                background-color: #000000; /* Establece el color de fondo como negro cuando se pasa el cursor sobre el botón */
+            }
+
+            label::first-line {
+                font-weight: bold; /* Establece el texto de la primera línea de la etiqueta en negrita */
+            }
+
+           .dividir2 img {
+                border-radius: 5px; /* Agrega bordes redondeados a las imágenes */
+                box-shadow: 0 8px 10px rgba(8, 150, 233, 0.3); /* Agrega una sombra a las imágenes */
+                margin-left: 20px; /* Establece un margen izquierdo de 20px */
+                margin-right: 20px; /* Establece un margen derecho de 20px */
+            }
+
+            #TIENDA_ACCESORIOS {
+                font-weight: bold; /* Establece el texto en negrita */
+                font-size: 40px; /* Tamaño de fuente " */
+            }
+
+            #Formulario:hover {
+                background-color: #000000; /* Establece el color de fondo como negro cuando se pasa el cursor sobre el botón */
+                color: #fff;
+            }
+            #Formulario  {
+                display: grid;
+                background-color: #97fad4;
+                color: #000000;
+                place-items: center;
+            }
+            .Link_Formulario{
+                display: grid;
+                grid-template-columns: repeat(6, 1fr);
+            }
+            #Link_Formulario{
+                grid-column-start: 3; /* Inicio de la columna */
+                grid-column-end: 5; /* Fin de la columna */
+                /* Estilos adicionales para el objeto */
+            }
+
+            .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(46, 155, 234, 0.8);
+            
+            }
+            
+            .overlay img {
+            display: block;
+            margin: 10% auto;
+            max-width: 100%;
+            max-height: 100%;
+            }
+
+        </style>
+    </head>
+    <body>
+        <header>
+            <!-- Contenido del encabezado -->
+            <div class="logo">
+                <img src="Imagenes/logotipo.png" alt="Logo de Estampados y Sublimado">
+                <h1 class="sitio">Sublimado y Estampados S.A.</h1>
+            </div>
+            <nav>
+                <!-- Menú de navegación -->
+                <ul>
+                    <li><a href="Home.html">Inicio</a></li>
+                    <li><a href="Accesorios.html">Categoría de Accesorios</a></li>
+                    <li><a href="Vestimenta.html">Categoría de Ropa</a></li>
+                    <li><a href="Nosotros.html">Nosotros</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section>
+             <!-- Contenido de la página de Sublimados de Accesorios -->
+            <h2 id="TIENDA_ACCESORIOS">ACCESORIOS</h2>
+            <div class="container">
+                <section id="Section-Izquierda">
+                    <h3>TAZAS</h3>
+                    <div class="dividir2">
+                        <div class="Estructura--subsecction">
+                            <img src="Imagenes/Taza.jpg" class="ImgAccesorios" alt="Taza" onclick="showOverlay(this.src)">
+                            <h4>Taza con diseño</h4>
+                            <p>Taza con frase + diseño</p>
+                            <p><span>Precio: $9.99</span></p>
+                            <a href="PaginaCarritoDeCompras.html" class="boton">Agregar al carrito</a>
+                        </div>
+                        <div class="Estructura--subsecction">
+                            <img src="Imagenes/Taza1.jpg" class="ImgAccesorios" alt="taza1" onclick="showOverlay(this.src)">
+                            <h4>Taza con diseño</h4>
+                            <p>Taza con frase + diseño</p>
+                            <p><span>Precio: $9.99</span></p>
+                            <a href="PaginaCarritoDeCompras.html" class="boton">Agregar al carrito</a>
+                        </div>
+                        <div class="Estructura--subsecction">
+                            <img src="Imagenes/taza3.png" class="ImgAccesorios" alt="Taza3" onclick="showOverlay(this.src)">
+                            <h4>Taza con diseño</h4>
+                            <p>Taza con diseño animado</p>
+                            <p><span>Precio: $9.99</span></p>
+                            <a href="PaginaCarritoDeCompras.html" class="boton">Agregar al carrito</a>
+                        </div>
+                        <div class="Estructura--subsecction">
+                            <img src="Imagenes/taza4.png" class="ImgAccesorios" alt="Taza 4" onclick="showOverlay(this.src)">
+                            <h4>Taza con diseño</h4>
+                            <p>Taza con diseño familiar</p>
+                            <p><span>Precio: $14.99</span></p>
+                            <a href="PaginaCarritoDeCompras.html" class="boton">Agregar al carrito</a>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="Section-Derecha">
+                    <div class="section">
+                        <h3>ESTUCHES</h3>
+                        <div class="dividir2">
+                            <div class="Estructura--subsecction">
+                                <img src="Imagenes/Forro.jpeg" class="ImgAccesorios"alt="Forro" onclick="showOverlay(this.src)">
+                                <h4>Estuche con diseño</h4>
+                                <p>Estuche con diseño de Flash</p>
+                                <p><span>Precio: $7.99</span></p>
+                                <a href="PaginaCarritoDeCompras.html" class="boton">Agregar al carrito</a>
+                            </div>
+
+                            <div class="Estructura--subsecction">
+                                <img src="Imagenes/Forro1.jpeg" class="ImgAccesorios" alt="Forro1" onclick="showOverlay(this.src)">
+                                <h4>Estuche con diseño</h4>
+                                <p>Estuche con diseño de Micky Mouse</p>
+                                <p><span>Precio: $7.99</span></p>
+                                <a href="PaginaCarritoDeCompras.html" class="boton">Agregar al carrito</a>
+                            </div>
+                            <div class="Estructura--subsecction">
+                                <img src="Imagenes/forro2.jpeg" class="ImgAccesorios" alt="Forro 2" onclick="showOverlay(this.src)">
+                                <h4>Estuche con diseño</h4> 
+                                <p>Estuche con diseño de Sticth</p>
+                                <p><span>Precio: $7.99</span></p>
+                                <a href="PaginaCarritoDeCompras.html" class="boton">Agregar al carrito</a>
+                            </div>
+                            <div class="Estructura--subsecction">
+                                <img src="Imagenes/forro3.jpeg" class="ImgAccesorios" alt="forro 3" onclick="showOverlay(this.src)">
+                                <h4>Estuche con diseño</h4>
+                                <p>Estuche con diseñor de Goku</p>
+                                <p><span>Precio: $9.99</span></p>
+                                <a href="PaginaCarritoDeCompras.html" class="boton">Agregar al carrito</a>
+                            </div>
+                        </div>
+                    </div> 
+                </section>
+            </div>>   
+            <div class="Link_Formulario">
+                <div id="Link_Formulario">
+                <a href="FormDistribuidores.html" class="boton" id="Formulario">Se Nuestro Distribuidor OFICIAL</a>
+                </div>
+            </div>
+        </section>
+        <div class="overlay" onclick="hideOverlay()">
+            <img id="overlayImage" src="">
+        </div> 
+        <footer>
+          <!-- Coloca aquí el contenido del pie de página si es necesario -->
+          <p id="Maikel"> Hecho por: <a href="#1">Meza Cedeño Maikel</a></p>
+            <span><em>Redes sociales</em></span>
+            <br>
+                <a href="#"><i class="fab fa-facebook-f">Facebook</i></a>
+                <a href="#"><i class="fab fa-twitter">Twitter</i></a>
+                <a href="#"><i class="fab fa-instagram">Instagram</i></a>
+                <a href="https://www.youtube.com"><i class="fab fa-youtube">Youtube</i></a> 
+          <br>
+          <p>Derechos de Autor &copy; 2023 - Sublimado y Estampados S.A.</p>
+        </footer>
+        <script>
+              // Función para mostrar la capa superpuesta con la imagen ampliada
+            function showOverlay(src) {
+              // Seleccionar la capa superpuesta por su clase CSS
+              var overlay = document.querySelector('.overlay');
+              // Selecciona la etiqueta <img> dentro de la capa superpuesta por su id
+              var overlayImage = document.querySelector('#overlayImage');
+        
+              // Establece la ruta de la imagen 
+              overlayImage.src = src;
+              // Mostrar la capa superpuesta cambiando su estilo a "block"
+              overlay.style.display = 'block';
+            }
+        
+            // Función para ocultar la capa superpuesta
+            function hideOverlay() {
+              // Selecciona la capa superpuesta 
+              var overlay = document.querySelector('.overlay');
+        
+              // Oculta la capa superpuesta 
+              overlay.style.display = 'none';
+            }
+        </script>
+        
+    </body>
+</html>

@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title> Se Distribuidor</title>
+        <meta name="description" content="Estampados y Sublimación de ACCESORIOS, distribuidor">
+        <meta charset="UTF-8">
+        <meta name="author" content="Meza Cedeño Maikel Danilo">
+        <link rel="stylesheet" href="CSS/EstiloExterno.css">
+        <style>
+        label{
+            gap: 10px 20px;
+            font-weight: bold;
+        }
+        input{
+            display: flex;
+            gap: 10px 20px;
+        }
+
+        .contenidoformulario{
+            margin: 35px auto;
+            margin-bottom: 55px;
+            width: 90%;
+            
+            border-radius: 5px;
+        }
+        .contenidoformulario label{
+            display: block;
+            height: 25px;
+        }
+        .formulario{
+            width: fit-content;
+            align-content: center;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: #f2f2f2;
+            padding-inline: 20px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        .elementosformulario{
+            margin-top: 30px;
+            margin-bottom: 30px;
+            display: grid;
+            grid-template-columns: 45% 45% ;
+            gap: 10px 30px;
+        }
+        .elementosformulario2 {
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+        .direccion{
+            display: flex;
+            justify-content: space-between;
+        }
+        .nombres{
+            display: flex;
+            justify-content: space-between;
+        }
+        .e-mail{
+            display: grid;
+            justify-content: space-between;
+            grid-template-columns: 45% 45% ;
+            gap: 10px 20px;
+
+        }
+        .empresanombre{
+            display: flex;
+            justify-content: space-between;
+        }
+        #flexdistribucion{
+            display: flex;
+            justify-content: space-between;
+        }
+        #inputcheck{
+            display: grid;
+            grid-template-columns: 32% 32% 32%;
+            gap: 10px;
+            justify-content: center;
+            text-align: center;
+        }
+        .inputcheck:nth-child(1){
+            grid-column: 1/4;
+        }
+        #distribuidor{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #inputcheck label{
+            margin: 5px;
+        }
+        .experienciaradio{
+            display: flex;
+            justify-content: space-between;
+        }
+        .listmasesperado{
+            display: flex;
+            justify-content: space-between;
+        }
+        .contenedorcheck{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .contenedorcheck label{
+            font-size:small
+        }
+        h1{
+            text-align: center;
+        }
+        label{
+            text-align: left;
+        }
+    </style>
+    </head>
+    <body>
+        <div id="ContenedorPrincipal">
+            <div class="Container">
+                <header>
+                    <!-- Contenido del encabezado -->
+                    <div class="logo">
+                        <img src="Imagenes/logotipo.png" alt="Logo de Estampados y Sublimado">
+                        <h1 class="sitio">Sublimado y Estampados S.A.</h1>
+                    </div>
+                    <nav>
+                        <!-- Menú de navegación -->
+                        <ul>
+                            <li><a href="Home.html">Inicio</a></li>
+                            <li><a href="Accesorios.html">Categoría de Accesorios</a></li>
+                            <li><a href="Vestimenta.html">Categoría de Ropa</a></li>
+                            <li><a href="Nosotros.html">Nosotros</a></li>
+                        </ul>
+                    </nav>
+                </header>
+            </div>
+            <main class="maincontainer">
+                <div class="contenidoformulario">
+                    <form>
+                        <div class="titulo">
+                            <h1>Se distribuidor Oficial de S.A.</h1>
+                        </div>
+                        <div class="formulario">
+                            <div class="elementosformulario2">
+                                <div class="nombres">
+                                    <label>Nombre completo:</label>
+                    
+                                    <input type="text" class="txtletras" id="nombretxt" placeholder="Nombres" style="width: 250px">
+                                    <input type="text" class="txtletras" id="apellidotxt" placeholder="Apellidos" style="width: 250px">
+                                </div>
+                            </div>
+                            <div class="elementosformulario">
+                                <div class="e-mail">
+                                    <label>E-mail:</label>
+                                    <input type="text" class="txtcorreo" id="emailtxt" placeholder="ejemplo: @gmail.com">  
+                                    
+                                </div>
+                                <div class="e-mail">
+                                    <label>Confirmar e-mail:</label>
+                                    <input type="text" class="txtcorreo" id="confirmaremailtxt" placeholder="Confirmar e-mail">
+                                </div>
+                            </div>
+                           <div class="elementosformulario2">
+                                <div class="empresanombre">
+                                    <label>Nombre de la empresa:</label>
+                                    <input type="text" class="txtletras" id="empresaname" placeholder="Ingrese el nombre de su empresa" style="width: 400px">
+                                </div>
+                           </div>
+                            <div class="elementosformulario">
+                                <div class="direccion">
+                                    <label>Ciudad:</label>
+                                    <input type="text" class="txtletras" id="ciudadtxt" placeholder="Ciudad">
+                                </div>
+                                <div class="direccion">
+                                    <label>Sector:</label>
+                                    <select style="width: auto;" class="select">
+                                        <option value="none" selected disabled hidden>Seleccione</option>
+                                        <option value="select1">Norte</option>
+                                        <option value="select2">Centro</option>
+                                        <option value="select3">Sur</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="elementosformulario">
+                                <div class="metododistribucion" id="flexdistribucion">
+                                    <div id="distribuidor">
+                                        <label>¿Cómo distriyube sus productos?</label>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div id="inputcheck">        
+                                        <div class="contenedorcheck">
+                                            <input type="checkbox" class="check">
+                                            <label>Venta directa</label>
+                                        </div>
+                                        <div class="contenedorcheck">
+                                            <input type="checkbox" class="check">
+                                            <label>Catálogo</label>
+                                        </div>
+                                        <div class="contenedorcheck">
+                                            <input type="checkbox" class="check">
+                                            <label>Ventas online</label>
+                                        </div>  
+                                        <div class="contenedorcheck">
+                                            <input type="checkbox" class="check">
+                                            <label>Puntos de venta</label>
+                                        </div>
+                                        <div class="contenedorcheck">
+                                            <input type="checkbox" class="check">
+                                            <label>Subdistribuidor</label>
+                                        </div>
+                                        <div class="contenedorcheck">
+                                            <input type="checkbox" class="check">
+                                            <label>Otro</label>
+                                        </div>        
+                                    </div>                               
+                                </div>                          
+                            </div>
+                            <div class="elementosformulario">
+                                <div class="experienciaradio">
+                                    <label>¿Ha trabajado como distribuidor con anterioridad?</label>
+                                </div>
+                                <div >
+                                    <input type="radio" name="radioexperiencia" class="radiobuttom" value="1">
+                                    <label>Sí</label>
+                                    <input type="radio" name="radioexperiencia" class="radiobuttom" value="2">
+                                    <label>No</label>
+                                </div>
+                            </div>
+                            <div class="elementosformulario">
+                                <div class="listmasesperado">
+                                    <label>¿Cúal de los siguientes productos es el más esperado por su clientela?</label>
+                                </div>
+                                <div>
+                                    <select style="width: auto;" class="select">
+                                        <option value="none" selected disabled hidden>Selecione</option>
+                                        <option value="select1">Camisetas con diseños</option>
+                                        <option value="select2">Tazas con Diseño</option>
+                                        <option value="select3">Forros con diseño</option>
+                                        <option value="select4">Gorra con diseños</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="elementosformulario" style="display: flex; justify-content: center; margin-bottom: 30px;">
+                                <input type="submit" value="Enviar" style="font-size: 15pt;" onclick="validacion()">
+                                <input type="reset"  value="Cancelar" style="font-size: 15pt;">
+                            </div>    
+                        </div>
+                    </form>
+                </div>
+            </main>
+        </div>
+            <div class="Container">
+                <footer>
+                    <!-- Coloca aquí el contenido del pie de página si es necesario -->
+                    <p id="Meza_Maikel"> Hecho por: <a href="#1">Maikel Meza Cedeño</a></p>
+                      <span><em>Redes sociales</em></span>
+                      <br>
+                          <a href="#"><i class="fab fa-facebook-f">Facebook</i></a>
+                          <a href="#"><i class="fab fa-twitter">Twitter</i></a>
+                          <a href="#"><i class="fab fa-instagram">Instagram</i></a>
+                          <a href="https://www.youtube.com"><i class="fab fa-youtube">Youtube</i></a> 
+                    <br>
+                    <p>Derechos de Autor &copy; 2023 - Sublimado y Estampados S.A.</p>
+                </footer>
+            </div> 
+        <script>
+            //validación de solo letras
+            function SoloLetras(){
+                  var letras = /^[a-z ,.'-,ñ]+$/i;
+                  var textboxletras = document.getElementsByClassName("txtletras");
+      
+                  for(let i = 0;  i < textboxletras.length; i++){
+                      if(!letras.test(textboxletras[i].value)){
+                          window.alert("Ingresar solo letras, por favor")
+                          event.preventDefault();
+                      }
+                  }
+              }
+              //validación del formato de email
+              function ValidarEmail(){
+                  var correo = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+                  var textboxemail = document.getElementsByClassName("txtcorreo");
+      
+                  for(let i = 0;  i < textboxemail.length; i++){
+                      if(!correo.test(textboxemail[i].value)){
+                          window.alert("El texto ingresado no es un formato de e-mail valido")
+                          event.preventDefault();
+                      }
+                  }
+              }
+              // validación de que el email sea el mismo que el se ingresó con anterioridad
+              function ConfirmarEmail(){
+                  var correo1 = document.getElementById("emailtxt").value;
+                  var confirmarcorreo = document.getElementById("confirmaremailtxt").value;
+                  
+                  if(correo1 === confirmarcorreo){     
+                  }else{
+                      window.alert("El e-mail ingresado es incorrecto")
+                      event.preventDefault();
+                  }
+              }
+              //validación de que como mimino se seleccionen 2 checkbox
+              function CheckBoxDistribución(){
+                  var checkbox = document.getElementsByClassName("check");
+                  var contador = 0;
+      
+                  for(var i=0; i< checkbox.length; i++) {
+                   if(checkbox[i].checked)
+                   contador++
+                  }
+                  if(contador < 2){
+                      window.alert("Debe seleccionar mínimo 2 medios de distribución")
+                      event.preventDefault();
+                  }
+              }
+              //validación de que se haya seleccionado un elemento
+              function RadioButtomNoNull(){
+                  var radio = document.getElementsByClassName("radiobuttom");
+                  contador = 0;
+      
+                  for(var i = 0; i < radio.length; i++){
+                      if(!radio[i].checked){
+                          contador++;
+                      }
+                  }
+                  if(contador < 1 || contador > 1){
+                      window.alert("Elija entré el si y el no");
+                      event.preventDefault();
+                  }
+              }
+              //validación de que el select tenga un valor diferente al dado por defecto
+              function ComboBoxNotNull(){
+                  var combobox = document.getElementsByClassName("select");
+                  var contador = 0;
+      
+                  for(var i = 0; i < combobox.length; i++){
+                      if(!combobox[i].checked){
+                          contador++;
+                      }
+                      if(combobox[i].value == "none"){
+                      window.alert("Debe seleccionar un elemento")
+                      event.preventDefault();
+                      } 
+                  }
+                       
+              }
+              //validación final
+              //llama a todas las funciones 
+              function validacion(){
+                  SoloLetras();
+                  ValidarEmail();
+                  CheckBoxDistribución();
+                  ComboBoxNotNull();
+                  RadioButtomNoNull();
+                  ConfirmarEmail();   
+              }    
+          </script>
+    </body>
+</html>
